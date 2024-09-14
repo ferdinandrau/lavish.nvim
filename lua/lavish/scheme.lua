@@ -261,6 +261,17 @@ local function fill_default(colors, style)
         TelescopeNormal = { link = "NormalFloat" },
         TelescopeBorder = { link = "FloatBorder" },
         TelescopePromptCounter = { fg = colors.base.fg3 },
+
+        -- mini.icons
+        MiniIconsAzure = { fg = colors.bright.blue },
+        MiniIconsBlue = { fg = colors.normal.blue },
+        MiniIconsCyan = { fg = colors.normal.cyan },
+        MiniIconsGreen = { fg = colors.normal.green },
+        MiniIconsGrey = { fg = colors.base.fg1 },
+        MiniIconsOrange = { fg = colors.normal.yellow },
+        MiniIconsPurple = { fg = colors.normal.magenta },
+        MiniIconsRed = { fg = colors.normal.red },
+        MiniIconsYellow = { fg = colors.bright.yellow },
     }
 end
 
