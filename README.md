@@ -4,7 +4,8 @@ A sleek, customizable Neovim colorscheme
 
 ![A preview of the light variant](showcase_light.png "A preview of the light variant") ![A preview of the dark variant](showcase_dark.png "A preview of the dark variant")
 
-> [!NOTE] lavish.nvim is a work in progress. While the configuration format is 100% stable there may be slight changes to both the colors and their use throughout the theme.
+> [!NOTE]
+> lavish.nvim is a work in progress. While the configuration format is 100% stable there may be slight changes to both the colors and their use throughout the theme.
 
 ## Installation
 
