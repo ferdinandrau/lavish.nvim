@@ -15,7 +15,7 @@ local DEFAULT_PALETTE = {
             fg5 = "#EFEDEA",
         },
         bold = {
-            red = "#A13F40",
+            red = "#b14846",
             yellow = "#B68749",
             green = "#66763D",
             cyan = "#4E706B",
@@ -32,7 +32,7 @@ local DEFAULT_PALETTE = {
         },
         faint = {
             red = "#D47766",
-            yellow = "#D9B771",
+            yellow = "#bfaa88",
             green = "#9FB95E",
             cyan = "#89B3B6",
             blue = "#93A7B3",
