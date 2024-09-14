@@ -73,8 +73,13 @@ require("lavish").setup({
     },
     palette_overrides = {
         dark = {
-            bg1 = "#000000",
-            bg2 = "#121212",
+            base = {
+                bg1 = "#000000",
+                bg2 = "#121212",
+            },
+            normal = {
+                green = "#0F5722",
+            },
         },
     },
 })
