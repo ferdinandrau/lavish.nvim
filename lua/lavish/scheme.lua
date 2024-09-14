@@ -115,7 +115,7 @@ local function fill_default(colors, style)
         SpecialComment = { link = "Special" },
         Statement = { link = "Keyword" },
         StorageClass = { link = "Type" },
-        String = { fg = colors.normal.green, italic = style.italic_comments },
+        String = { fg = colors.normal.green, italic = style.italic_strings },
         Structure = { link = "Type" },
         Tag = { link = "Special" },
         Todo = { fg = colors.normal.red, bold = true },
