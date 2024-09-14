@@ -12,7 +12,7 @@ return {
         c = { bg = colors.base.bg4, fg = colors.base.fg2 },
     },
     visual = {
-        a = { bg = colors.bright.yellow, fg = colors.base.bg1, gui = "bold" },
+        a = { bg = colors.bold.yellow, fg = colors.base.bg1, gui = "bold" },
         b = { bg = colors.base.bg5, fg = colors.base.fg1 },
         c = { bg = colors.base.bg4, fg = colors.base.fg2 },
     },

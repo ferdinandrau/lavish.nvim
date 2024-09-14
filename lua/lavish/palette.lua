@@ -9,18 +9,18 @@ local DEFAULT_PALETTE = {
             bg4 = "#EDEDED",
             bg5 = "#DDDAD7",
             fg1 = "#1E1C1D",
-            fg2 = "#7A7577",
-            fg3 = "#C6C3C0",
+            fg2 = "#423E41",
+            fg3 = "#969093",
             fg4 = "#D1CDCA",
             fg5 = "#EFEDEA",
         },
-        bright = {
-            red = "#D47766",
-            yellow = "#EFC05E",
-            green = "#9FB95E",
-            cyan = "#89B3B6",
-            blue = "#93A7B3",
-            magenta = "#D191AF",
+        bold = {
+            red = "#A13F40",
+            yellow = "#B68749",
+            green = "#66763D",
+            cyan = "#4E706B",
+            blue = "#507091",
+            magenta = "#9d5686",
         },
         normal = {
             red = "#C55350",
@@ -30,13 +30,13 @@ local DEFAULT_PALETTE = {
             blue = "#628B9D",
             magenta = "#B2719B",
         },
-        dim = {
-            red = "#7D2A2F",
-            yellow = "#8B7449",
-            green = "#233524",
-            cyan = "#253333",
-            blue = "#273142",
-            magenta = "#422741",
+        faint = {
+            red = "#D47766",
+            yellow = "#D9B771",
+            green = "#9FB95E",
+            cyan = "#89B3B6",
+            blue = "#93A7B3",
+            magenta = "#D191AF",
         },
     },
     dark = {
@@ -52,7 +52,7 @@ local DEFAULT_PALETTE = {
             fg4 = "#4A4443",
             fg5 = "#2B2727",
         },
-        bright = {
+        bold = {
             red = "#D47766",
             yellow = "#EFC05E",
             green = "#9FB95E",
@@ -68,7 +68,7 @@ local DEFAULT_PALETTE = {
             blue = "#628B9D",
             magenta = "#B2719B",
         },
-        dim = {
+        faint = {
             red = "#7D2A2F",
             yellow = "#8B7449",
             green = "#233524",

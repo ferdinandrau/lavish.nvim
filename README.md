@@ -132,7 +132,7 @@ require("lavish").setup({
             Keyword = { fg = colors.normal.green, italic = true },
             Normal = { bg = style.transparent and "NONE" or colors.base.bg2 },
             NormalFloat = { bg = colors.base.bg3 },
-            Search = { fg = colors.base.fg1, bg = colors.dim.red },
+            Search = { fg = colors.base.fg1, bg = colors.faint.red },
             WinBar = { link = "Normal" },
         }
     end,
