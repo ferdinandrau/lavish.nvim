@@ -70,7 +70,7 @@ local function fill_default(colors, style)
         Substitute = { bg = colors.faint.red },
         TabLine = { link = "StatusLine" },
         TabLineFill = { link = "StatusLine" },
-        TabLineSel = { bg = colors.base.bg4 },
+        TabLineSel = { bg = colors.base.bg1, bold = true },
         TermCursor = { link = "Cursor" },
         TermCursorNC = { fg = colors.base.bg1, bg = colors.base.fg2 },
         Title = { fg = colors.normal.green },
