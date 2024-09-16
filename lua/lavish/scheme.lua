@@ -271,6 +271,14 @@ local function fill_default(colors, style)
         MiniIconsPurple = { fg = colors.normal.magenta },
         MiniIconsRed = { fg = colors.normal.red },
         MiniIconsYellow = { fg = colors.bold.yellow },
+
+        -- mason.nvim
+        MasonHeader = { bold = true },
+        MasonHighlight = { fg = colors.normal.blue },
+        MasonHighlightBlockBold = { link = "Search" },
+        MasonLink = { fg = colors.bold.blue },
+        MasonMuted = { fg = colors.base.fg2 },
+        MasonMutedBlock = { link = "ColorColumn" },
     }
 end
 
