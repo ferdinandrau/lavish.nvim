@@ -123,11 +123,15 @@ local function fill_default(colors, style)
         Underlined = { underline = true },
 
         --- :help diagnostic-highlights ---
-        DiagnosticError = { fg = colors.normal.red },
+        DiagnosticError = { fg = colors.bold.red },
         DiagnosticWarn = { fg = colors.bold.yellow },
         DiagnosticInfo = { fg = colors.bold.blue },
         DiagnosticHint = { fg = colors.bold.green },
         DiagnosticUnnecessary = { fg = colors.base.fg4 },
+        DiagnosticUnderlineError = { sp = colors.normal.red, undercurl = true },
+        DiagnosticUnderlineWarn = { sp = colors.normal.yellow, undercurl = true },
+        DiagnosticUnderlineInfo = { sp = colors.normal.blue, undercurl = true },
+        DiagnosticUnderlineHint = { sp = colors.normal.green, undercurl = true },
 
         --- :help lsp-highlight ---
         LspReferenceText = { link = "IncSearch" },
