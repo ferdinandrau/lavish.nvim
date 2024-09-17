@@ -55,7 +55,7 @@ local function fill_default(colors, style)
         PmenuSel = { bg = colors.base.bg5 },
         PmenuThumb = { link = "PmenuSel" },
         Question = { link = "MoreMsg" },
-        QuickFixLine = { bg = colors.base.bg3 },
+        QuickFixLine = { bg = colors.faint.green },
         Search = { fg = colors.base.fg1, bg = colors.faint.yellow },
         SignColumn = { link = "LineNr" },
         SnippetTabstop = { fg = colors.base.fg1, bg = colors.base.bg3 },
@@ -122,21 +122,30 @@ local function fill_default(colors, style)
         Typedef = { link = "Type" },
         Underlined = { underline = true },
 
+        -----------------------------------
         --- :help diagnostic-highlights ---
-        DiagnosticError = { fg = colors.bold.red },
-        DiagnosticWarn = { fg = colors.bold.yellow },
-        DiagnosticInfo = { fg = colors.bold.blue },
-        DiagnosticHint = { fg = colors.bold.green },
+        -----------------------------------
+
+        DiagnosticError = { fg = colors.normal.red },
+        DiagnosticWarn = { fg = colors.normal.yellow },
+        DiagnosticInfo = { fg = colors.normal.blue },
+        DiagnosticHint = { fg = colors.normal.green },
+        DiagnosticOk = { fg = colors.bold.green },
         DiagnosticUnnecessary = { fg = colors.base.fg4 },
+        DiagnosticDeprecated = { sp = colors.normal.red, strikethrough = true },
         DiagnosticUnderlineError = { sp = colors.normal.red, undercurl = true },
         DiagnosticUnderlineWarn = { sp = colors.normal.yellow, undercurl = true },
         DiagnosticUnderlineInfo = { sp = colors.normal.blue, undercurl = true },
         DiagnosticUnderlineHint = { sp = colors.normal.green, undercurl = true },
+        DiagnosticUnderlineOk = { sp = colors.bold.green, undercurl = true },
 
+        ---------------------------
         --- :help lsp-highlight ---
-        LspReferenceText = { link = "IncSearch" },
-        LspReferenceRead = { link = "NormalFloat" },
-        LspReferenceWrite = { link = "NormalFloat" },
+        ---------------------------
+
+        LspReferenceText = { bg = colors.base.bg3 },
+        LspReferenceRead = { link = "LspReferenceText" },
+        LspReferenceWrite = { link = "LspReferenceText" },
         LspInlayHint = { fg = colors.base.fg3, bg = colors.base.bg3 },
 
         --- :help treesitter-highlight-groups ---
@@ -234,10 +243,10 @@ local function fill_default(colors, style)
         -- ['@tag.delimiter'] = {},
 
         -- Quickfix list
-        qfFileName = { fg = colors.base.fg3 },
-        qfError = { fg = colors.bold.red },
+        qfFileName = { fg = colors.normal.blue },
+        qfError = { fg = colors.normal.red },
         qfSeparator = { fg = colors.base.fg1 },
-        qfLineNr = { fg = colors.base.fg3 },
+        qfLineNr = { fg = colors.base.fg2 },
 
         --- :help lspconfig-highlight ---
         -- LspInfoTitle
