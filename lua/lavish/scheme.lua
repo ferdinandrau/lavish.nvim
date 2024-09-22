@@ -66,7 +66,7 @@ local function fill_default(colors, style)
         SpellRare = { fg = colors.bold.yellow },
         StatusLine = { fg = colors.base.fg1, bg = colors.base.bg4 },
         StatusLineNC = { fg = colors.base.fg3, bg = colors.base.bg4 },
-        Substitute = { bg = colors.faint.red },
+        Substitute = { fg = colors.base.fg1, bg = colors.faint.red },
         TabLine = { fg = colors.base.fg2, bg = colors.base.bg4 },
         TabLineFill = { link = "TabLine" },
         TabLineSel = { bg = colors.base.bg1, bold = true },
