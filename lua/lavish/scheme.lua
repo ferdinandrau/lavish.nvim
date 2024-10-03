@@ -237,10 +237,10 @@ local function fill_default(colors, style)
         ["@diff.plus"] = { link = "Added" },
         ["@diff.minus"] = { link = "Removed" },
         ["@diff.delta"] = { link = "Changed" },
-        -- ['@tag'] = {},
-        -- ['@tag.builtin'] = {},
-        ['@tag.attribute'] = { link = "Identifier" },
-        -- ['@tag.delimiter'] = {},
+        ["@tag"] = { link = "Tag" },
+        ["@tag.builtin"] = { link = "Special" },
+        ["@tag.attribute"] = { link = "Identifier" },
+        ["@tag.delimiter"] = { link = "Delimiter" },
 
         -- Quickfix list
         qfFileName = { fg = colors.normal.blue },
