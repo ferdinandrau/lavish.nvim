@@ -9,10 +9,10 @@ A configurable Neovim colorscheme with support for Tree-sitter highlighting and 
     </tr>
     <tr>
         <td width="50%">
-            <img src="showcase_light.png" alt="A preview of the light variant" title="A preview of the light variant (click to enlarge)"/>
+            <img src="https://raw.githubusercontent.com/ferdinandrau/lavish.nvim/refs/heads/main/showcase_light.png" alt="A preview of the light variant" title="A preview of the light variant (click to enlarge)"/>
         </td>
         <td width="50%">
-            <img src="showcase_dark.png" alt="A preview of the dark variant" title="A preview of the dark variant (click to enlarge)"/>
+            <img src="https://raw.githubusercontent.com/ferdinandrau/lavish.nvim/refs/heads/main/showcase_dark.png" alt="A preview of the dark variant" title="A preview of the dark variant (click to enlarge)"/>
         </td>
     </tr>
 </table>
