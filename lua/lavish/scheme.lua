@@ -239,7 +239,7 @@ local function fill_default(colors, style)
         ["@diff.delta"] = { link = "Changed" },
         -- ['@tag'] = {},
         -- ['@tag.builtin'] = {},
-        ['@tag.attribute'] = { link = "Identifier"},
+        ['@tag.attribute'] = { link = "Identifier" },
         -- ['@tag.delimiter'] = {},
 
         -- Quickfix list
