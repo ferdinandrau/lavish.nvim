@@ -1,11 +1,27 @@
 # lavish.nvim
 
-A sleek, customizable Neovim colorscheme
+A configurable Neovim colorscheme with support for Tree-sitter highlighting and many plugins.
 
-![A preview of the light variant](showcase_light.png "A preview of the light variant") ![A preview of the dark variant](showcase_dark.png "A preview of the dark variant")
+<table width="100%">
+    <tr>
+        <th>Light</th>
+        <th>Dark</th>
+    </tr>
+    <tr>
+        <td width="50%">
+            <img src="showcase_light.png" alt="A preview of the light variant" title="A preview of the light variant (click to enlarge)"/>
+        </td>
+        <td width="50%">
+            <img src="showcase_dark.png" alt="A preview of the dark variant" title="A preview of the dark variant (click to enlarge)"/>
+        </td>
+    </tr>
+</table>
 
 > [!NOTE]
 > lavish.nvim is a work in progress. While the configuration format is 100% stable there may be slight changes to both the colors and their use throughout the theme.
+
+> [!IMPORTANT]
+> Something does not look good in your favorite language or support for a plugin is missing? Feel free to open an issue or submit a PR!
 
 ## Installation
 
@@ -33,40 +49,40 @@ git clone https://github.com/ferdinandrau/lavish.nvim \
 
 ## Applying
 
-lavish.nvim registers three colorschemes for you to choose:
+lavish.nvim registers three colorschemes for you to choose from:
 
 - `lavish` respects Neovim's `background` option, changing between light and dark to match it. To apply it, use
 
   ```lua
   require('lavish').apply()
-  -- or equivalently
-  vim.cmd.colorscheme('lavish')
+  -- or equivalently:
+  -- vim.cmd.colorscheme('lavish')
   ```
 
 - `lavish-light` always shows the light variant, irrespective of `background`. To apply it, use
 
   ```lua
   require('lavish').apply('light')
-  -- or equivalently
-  vim.cmd.colorscheme('lavish-light')
+  -- or equivalently:
+  -- vim.cmd.colorscheme('lavish-light')
   ```
 
 - `lavish-dark` always shows the dark variant, irrespective of `background`. To apply it, use
 
   ```lua
   require('lavish').apply('dark')
-  -- or equivalently
-  vim.cmd.colorscheme('lavish-dark')
+  -- or equivalently:
+  -- vim.cmd.colorscheme('lavish-dark')
   ```
 
 ## Configuration
 
-The `lavish` Lua module provides a function called `setup` to customize aspects of the plugin, including colors and highlights. It does not have to be called if you are happy with the defaults (see below).
+The `lavish` Lua module provides a `setup` function to customize aspects of the plugin, including colors and highlights. It does not have to be called if you are happy with the defaults (shown below).
 
 **Here's an example:**
 
 ```lua
-require("lavish").setup({
+require('lavish').setup({
     style = {
         italic_comments = true,
         italic_strings = true,
@@ -74,11 +90,11 @@ require("lavish").setup({
     palette_overrides = {
         dark = {
             base = {
-                bg1 = "#000000",
-                bg2 = "#121212",
+                bg1 = '#000000',
+                bg2 = '#121212',
             },
             normal = {
-                green = "#0F5722",
+                green = '#0F5722',
             },
         },
     },
@@ -100,10 +116,10 @@ require("lavish").setup({
         -- usually needed for a transparency effect.
         transparent = false,
 
-        -- Whether or not comments show be italicized.
+        -- Whether or not comments should be italicized.
         italic_comments = false,
 
-        -- Whether or not strings show be italicized.
+        -- Whether or not strings should be italicized.
         italic_strings = false,
     },
 
@@ -130,15 +146,55 @@ require("lavish").setup({
 **Example usage of `scheme_overrides`:**
 
 ```lua
-require("lavish").setup({
+require('lavish').setup({
     scheme_overrides = function(colors, style)
         return {
             Operator = { fg = colors.normal.magenta },
             Keyword = { fg = colors.normal.green, italic = true },
-            Normal = { bg = style.transparent and "NONE" or colors.base.bg2 },
+            Normal = { bg = style.transparent and 'NONE' or colors.base.bg2 },
             NormalFloat = { bg = colors.base.bg3 },
             Search = { fg = colors.base.fg1, bg = colors.faint.red },
-            WinBar = { link = "Normal" },
+            WinBar = { link = 'Normal' },
+        }
+    end,
+})
+```
+
+**Example of defining and using custom colors:**
+
+```lua
+require('lavish').setup({
+    -- Here we define a normal and a bold `orange` for both variants.
+    -- Important: If you only define a color in one variant, it won't
+    -- be available when applying the other one, which will result in
+    -- the affected attributes not being set at all, thus falling back
+    -- to a group like `Normal`. Therefore, if you want to be able to
+    -- use light and dark, it is necessary to define your colors in
+    -- both `light` and `dark`. If you always use one variant, you of
+    -- course don't need to do this.
+    palette_overrides = {
+        light = {
+            bold = {
+                orange = '#FF10B29',
+            },
+            normal = {
+                orange = '#FC8804',
+            },
+        },
+        dark = {
+            bold = {
+                orange = '#ED9138',
+            },
+            normal = {
+                orange = '#FC8F03',
+            },
+        },
+    },
+    -- Now we can apply the custom colors where we want them:
+    scheme_overrides = function(colors, _)
+        return {
+            Constant = { fg = colors.normal.orange, bold = false },
+            SpecialChar = { fg = colors.bold.orange },
         }
     end,
 })
