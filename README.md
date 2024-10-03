@@ -175,7 +175,7 @@ require('lavish').setup({
     palette_overrides = {
         light = {
             bold = {
-                orange = '#FF10B29',
+                orange = '#FC9323',
             },
             normal = {
                 orange = '#FC8804',
