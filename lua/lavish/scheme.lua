@@ -316,10 +316,12 @@ M.set = function(overrides)
     current_scheme.light = fill_default(palette_tbl.light, config_tbl.style)
     current_scheme.dark = fill_default(palette_tbl.dark, config_tbl.style)
     if overrides ~= nil then
-        local custom_scheme = {}
-        custom_scheme.light = overrides(palette_tbl.light, config_tbl.style)
-        custom_scheme.dark = overrides(palette_tbl.dark, config_tbl.style)
-        current_scheme = vim.tbl_deep_extend("force", current_scheme, custom_scheme)
+        for group, hl in pairs(overrides(palette_tbl.light, config_tbl.style)) do
+            current_scheme.light[group] = hl
+        end
+        for group, hl in pairs(overrides(palette_tbl.dark, config_tbl.style)) do
+            current_scheme.dark[group] = hl
+        end
     end
 end
 

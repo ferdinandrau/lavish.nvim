@@ -151,7 +151,7 @@ require('lavish').setup({
         return {
             Operator = { fg = colors.normal.magenta },
             Keyword = { fg = colors.normal.green, italic = true },
-            Normal = { bg = style.transparent and 'NONE' or colors.base.bg2 },
+            Normal = { fg = colors.base.fg1, bg = style.transparent and 'NONE' or colors.base.bg2 },
             NormalFloat = { bg = colors.base.bg3 },
             Search = { fg = colors.base.fg1, bg = colors.faint.red },
             WinBar = { link = 'Normal' },
@@ -193,7 +193,7 @@ require('lavish').setup({
     -- Now we can apply the custom colors where we want them:
     scheme_overrides = function(colors, _)
         return {
-            Constant = { fg = colors.normal.orange, bold = false },
+            Constant = { fg = colors.normal.orange },
             SpecialChar = { fg = colors.bold.orange },
         }
     end,
