@@ -31,12 +31,12 @@ local DEFAULT_PALETTE = {
             magenta = "#B26E97",
         },
         faint = {
-            red = "#BE867C",
-            yellow = "#B59B7D",
-            green = "#B3BB9F",
-            cyan = "#9EC1C3",
-            blue = "#88A8BD",
-            magenta = "#CA98AF",
+            red = "#e3cdc8",
+            yellow = "#f5e3c9",
+            green = "#dbdfd3",
+            cyan = "#dde9e9",
+            blue = "#e0e8f2",
+            magenta = "#FEE9F3",
         },
     },
     dark = {
