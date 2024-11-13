@@ -297,6 +297,13 @@ local function fill_default(colors, style)
         MasonLink = { fg = colors.bold.blue },
         MasonMuted = { fg = colors.base.fg2 },
         MasonMutedBlock = { link = "ColorColumn" },
+
+        BlinkCmpLabel = { fg = colors.base.fg1, bg = "NONE" },
+        BlinkCmpLabelMatch = { fg = colors.normal.cyan },
+        BlinkCmpLabelDeprecated = { link = "DiagnosticDeprecated" },
+        BlinkCmpMenuBorder = { fg = colors.base.fg3, bg = colors.base.bg3 },
+        BlinkCmpDocBorder = { fg = colors.base.fg3, bg = colors.base.bg3 },
+        BlinkCmpDocCursorLine = { bg = "NONE" },
     }
 end
 
