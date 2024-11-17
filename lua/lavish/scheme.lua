@@ -278,8 +278,14 @@ local function fill_default(colors, style)
         IblScope = { fg = colors.base.fg4 },
 
         TelescopeBorder = { link = "FloatBorder" },
+        TelescopeMultiIcon = { fg = colors.bold.magenta },
+        TelescopeMultiSelection = { link = "TelescopeNormal" },
         TelescopeNormal = { link = "NormalFloat" },
         TelescopePromptCounter = { fg = colors.base.fg3 },
+        TelescopePromptPrefix = { fg = colors.bold.green },
+        TelescopeSelection = { bg = colors.base.bg5 },
+        TelescopeSelectionCaret = { fg = colors.normal.cyan, bg = colors.base.bg5 },
+        TelescopeTitle = { fg = colors.base.fg1, bold = true },
 
         MiniIconsAzure = { fg = colors.bold.blue },
         MiniIconsBlue = { fg = colors.normal.blue },
